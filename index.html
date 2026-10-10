@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jiayang Li</title>
-  <meta name="description" content="Jiayang Li — personal homepage." />
+  <meta name="description" content="Jiayang Li — software engineer at Amazon Prime Video, based in London." />
   <meta property="og:title" content="Jiayang Li" />
-  <meta property="og:description" content="Builder, engineer, curious mind." />
+  <meta property="og:description" content="Software engineer at Amazon Prime Video, based in London." />
   <meta property="og:url" content="https://lijiayay.xyz" />
   <link rel="canonical" href="https://lijiayay.xyz" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -84,10 +84,25 @@
     footer { border-top: 1px solid var(--line); padding: 28px 0; font-size: 13px; color: var(--muted);
       display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
-    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
-    @media (max-width: 560px) { nav ul { gap: 16px; } .hero { padding: 56px 0; } }
+
+    .exp { display: grid; gap: 0; }
+    .exp-row { display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 20px 0; border-bottom: 1px dashed var(--line); }
+    .exp-row:last-child { border-bottom: 0; }
+    .exp-row .when { color: var(--muted); font-size: 14px; padding-top: 2px; }
+    .exp-row h3 { font-size: 17px; font-weight: 600; }
+    .exp-row p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+    .list { list-style: none; display: grid; gap: 12px; }
+    .list li { display: flex; justify-content: space-between; gap: 16px; padding-bottom: 12px; border-bottom: 1px dashed var(--line); font-size: 15px; }
+    .list li:last-child { border-bottom: 0; }
+    .list li span:last-child { color: var(--muted); white-space: nowrap; font-size: 14px; }
+    .list a { text-decoration: none; }
+    .list a:hover { color: var(--accent); }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    @media (max-width: 680px) { .two { grid-template-columns: 1fr; } .exp-row { grid-template-columns: 1fr; gap: 4px; } }
+    .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } }
+    @media (max-width: 560px) { nav ul { gap: 14px; font-size: 13px; } nav ul li:first-child { display: none; } .hero { padding: 56px 0; } .list li { flex-direction: column; gap: 2px; } }
   </style>
 </head>
 <body>
@@ -96,15 +111,16 @@
       <a class="logo" href="#">J<span>.</span>L</a>
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
     <header class="hero">
-      <div class="eyebrow reveal"><span class="dot"></span> Open to new ideas &amp; collaborations</div>
+      <div class="eyebrow reveal"><span class="dot"></span> London, United Kingdom</div>
       <h1 class="reveal">Jiayang <em>Li</em></h1>
-      <p class="lede reveal">I <strong>build things for the web</strong> — software, products, and experiments at the intersection of engineering and design.</p>
+      <p class="lede reveal">Software engineer at <strong>Amazon Prime Video</strong>. Computer science &amp; applied math grad from <strong>USC</strong>, with a growing interest in financial engineering.</p>
       <div class="cta reveal">
         <a class="btn primary" href="mailto:jli68666666@gmail.com">Say hello →</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/jiayang-li-980b38190/" target="_blank" rel="noopener">LinkedIn</a>
@@ -114,39 +130,90 @@
 
     <section id="about" class="about">
       <h2 class="reveal">About</h2>
-      <p class="reveal">Hi, I'm Jiayang. <span>I care about clean code, thoughtful interfaces, and shipping things people actually use.</span></p>
-      <p class="reveal"><span>When I'm not building, you'll find me learning something new, reading, or exploring the next idea worth chasing.</span></p>
+      <p class="reveal">Hi, I'm Jiayang. <span>I'm a software engineer at Amazon Prime Video, based in London.</span></p>
+      <p class="reveal"><span>I studied Computer Science and Applied &amp; Computational Mathematics at the University of Southern California. I've built across the stack — web apps in React and Java, backend services in Go on Kubernetes, and iOS apps in Swift — and lately I've been digging into quantitative finance and financial engineering.</span></p>
+    </section>
+
+    <section id="experience">
+      <h2 class="reveal">Experience &amp; Education</h2>
+      <div class="exp">
+        <div class="exp-row reveal">
+          <div class="when">Now</div>
+          <div><h3>Software Engineer · Amazon Prime Video</h3><p>London, United Kingdom</p></div>
+        </div>
+        <div class="exp-row reveal">
+          <div class="when">2018 — 2021</div>
+          <div><h3>University of Southern California</h3><p>B.S. Computer Science (Viterbi) &amp; B.S. Applied and Computational Mathematics (Dornsife). Dean's List and Academic Achievement Award, all semesters.</p></div>
+        </div>
+      </div>
     </section>
 
     <section id="work">
-      <h2 class="reveal">Selected work</h2>
+      <h2 class="reveal">Selected projects</h2>
       <div class="grid">
-        <a class="card reveal" href="#">
-          <h3>Project One <span class="arrow">↗</span></h3>
-          <p>A short description of what this project does and why it matters.</p>
-          <div class="tags"><span>TypeScript</span><span>React</span></div>
+        <a class="card reveal" href="https://github.com/jli686/Event-Recommendation" target="_blank" rel="noopener">
+          <h3>Event Recommendation <span class="arrow">↗</span></h3>
+          <p>Event search &amp; ticketing site with content-based recommendations from search history, backed by Ticketmaster data and deployed on AWS EC2.</p>
+          <div class="tags"><span>Java</span><span>SQL</span><span>AWS</span></div>
         </a>
-        <a class="card reveal" href="#">
-          <h3>Project Two <span class="arrow">↗</span></h3>
-          <p>Another highlight — a tool, product, or experiment you're proud of.</p>
-          <div class="tags"><span>Python</span><span>AI</span></div>
-        </a>
-        <a class="card reveal" href="#">
-          <h3>Writing <span class="arrow">↗</span></h3>
-          <p>Notes and essays on building, learning, and everything in between.</p>
-          <div class="tags"><span>Blog</span></div>
-        </a>
+        <div class="card reveal">
+          <h3>Geo Social Network</h3>
+          <p>Location-based social app: React frontend with Google Maps, JWT auth, and a scalable Go backend on Google Kubernetes Engine.</p>
+          <div class="tags"><span>React</span><span>Go</span><span>GKE</span></div>
+        </div>
+        <div class="card reveal">
+          <h3>NBA-Visual</h3>
+          <p>Interactive dashboard visualizing NBA player shot data with custom filters, themes, and autocomplete player search.</p>
+          <div class="tags"><span>React</span><span>D3</span><span>Ant Design</span></div>
+        </div>
+        <div class="card reveal">
+          <h3>Hotspot</h3>
+          <p>Location-based iOS app for smart driving — custom map annotations for speeding, parking, and traffic events, synced via Firebase.</p>
+          <div class="tags"><span>Swift</span><span>MapKit</span><span>Firebase</span></div>
+        </div>
+        <div class="card reveal">
+          <h3>Harvest</h3>
+          <p>USC CS 401 capstone — a team-built iOS app.</p>
+          <div class="tags"><span>iOS</span><span>Capstone</span></div>
+        </div>
+        <div class="card reveal">
+          <h3>Bookworm</h3>
+          <p>Book search site on the Google Books API with Java servlets, REST APIs, and user accounts on Google Cloud SQL.</p>
+          <div class="tags"><span>Java</span><span>Cloud SQL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="two">
+        <div>
+          <h2 class="reveal">Certifications</h2>
+          <ul class="list">
+            <li class="reveal"><span>Foundations of Financial Engineering — WorldQuant University</span><span>2025</span></li>
+            <li class="reveal"><span>Intro to Financial Engineering &amp; Risk Management — Columbia</span><span>2024</span></li>
+            <li class="reveal"><span>Term-Structure and Credit Derivatives — Columbia</span><span>2024</span></li>
+            <li class="reveal"><span>Python and Statistics for Financial Analysis — HKUST</span><span>2024</span></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="reveal">Honors</h2>
+          <ul class="list">
+            <li class="reveal"><span>Vice President — Tau Beta Pi, Engineering Honor Society</span><span>2020–21</span></li>
+            <li class="reveal"><span>Member — Phi Beta Kappa Society</span><span>2021–</span></li>
+            <li class="reveal"><span>Dean's List — USC</span><span>All semesters</span></li>
+            <li class="reveal"><span>Academic Achievement Award — USC</span><span>All semesters</span></li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="contact">
-      <h3 class="reveal">Let's build something<br/><em style="color:var(--accent)">together.</em></h3>
+      <h3 class="reveal">Let's connect<br/><em style="color:var(--accent)">say hello.</em></h3>
       <p class="reveal">My inbox is always open.</p>
       <a class="btn primary reveal" href="mailto:jli68666666@gmail.com">jli68666666@gmail.com</a>
       <div class="socials reveal">
         <a href="https://github.com/jli686uk" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg></a>
         <a href="https://www.linkedin.com/in/jiayang-li-980b38190/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
-        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 1.2h3.7l-8 9.2L24 22.8h-7.4l-5.8-7.6-6.6 7.6H.5l8.6-9.8L0 1.2h7.6l5.2 6.9 6.1-6.9zm-1.3 19.4h2L6.5 3.3H4.3l13.3 17.3z"/></svg></a>
       </div>
     </section>
 
@@ -156,6 +223,7 @@
     </footer>
   </div>
   <script>
+    document.documentElement.classList.add('js');
     document.getElementById('y').textContent = new Date().getFullYear();
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 6) * 60 + 'ms'; io.observe(el); });
