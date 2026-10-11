@@ -10,6 +10,7 @@
   <meta property="og:title" content="Jiayang Li" />
   <meta property="og:description" content="Software engineer at Amazon Prime Video, based in London." />
   <meta property="og:url" content="https://lijiayay.xyz" />
+  <meta property="og:image" content="https://lijiayay.vercel.app/avatar.jpg" />
   <link rel="canonical" href="https://lijiayay.xyz" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,6 +43,7 @@
     nav ul a:hover { color: var(--fg); }
 
     .hero { padding: 96px 0 80px; }
+    .avatar { display: block; width: 104px; height: 104px; border-radius: 50%; object-fit: cover; border: 2px solid var(--line); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px color-mix(in srgb, var(--accent) 45%, transparent); margin-bottom: 28px; }
     .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted);
       border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; background: var(--card); }
     .dot { width: 8px; height: 8px; border-radius: 50%; background: #3ecf8e; box-shadow: 0 0 0 4px rgba(62,207,142,.15); }
@@ -118,6 +120,7 @@
     </nav>
 
     <header class="hero">
+      <img class="avatar reveal" src="avatar.jpg" alt="Jiayang Li" width="104" height="104" />
       <div class="eyebrow reveal"><span class="dot"></span> London, United Kingdom</div>
       <h1 class="reveal">Jiayang <em>Li</em></h1>
       <p class="lede reveal">Software engineer at <strong>Amazon Prime Video</strong>. Computer science &amp; applied math grad from <strong>USC</strong>, with a growing interest in financial engineering.</p>
